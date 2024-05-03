@@ -6,6 +6,10 @@ class Controleur {
         public function __construct (){
             $this->unModele = new Modele ();
         }
+
+        public function verifConnexion ( $nomClient, $passwordc ){
+            return $this->unModele->verifConnexion($nomClient, $passwordc);
+        }
    /*********************Gestion technicien******************/
    
         public function selectAllTechniciens(){
@@ -31,12 +35,12 @@ class Controleur {
         }
 
         /*********************Gestion intervention***************** */
-        public function selectAllInterventions(){
-            return $this->unModele->selectAllInterventions();
+        public function selectAllInterventions($numClient){
+            return $this->unModele->selectAllInterventions( $numClient);
         }
 
-        public function searchAllInterventions($filtre){
-            return $this->unModele->searchAllInterventions($filtre);
+        public function searchAllInterventions($filtre, $numClient){
+            return $this->unModele->searchAllInterventions($filtre, $numClient);
         }
 
         public function insertIntervention ($tab){

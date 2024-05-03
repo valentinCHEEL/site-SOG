@@ -3,9 +3,10 @@
   session_start();
 
   // Détruire la session.
-  if(session_destroy())
-  {
+  session_destroy();
+  
     // Redirection vers la page de connexion
-    header("../index.html");
-  }
+    header("Location: ../index.html");
+    exit;
+  
 ?>

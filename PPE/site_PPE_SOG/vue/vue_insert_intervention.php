@@ -1,4 +1,4 @@
-<h3> Réserver une intervention auprès de nos techniciens</h3>
+<h3 style="color: white;"> Réserver une intervention auprès de nos techniciens</h3>
 <style>
         body {
             background-image: url("images/arriereplan.jpg");
@@ -9,13 +9,13 @@
     <table>
         
         <tr>
-            <td> dateAffectation </td>
+            <td style="color: white;"> dateAffectation </td>
             <td> <input type="datetime-local" name="dateAffectation"
                 value="<?= ($leIntervention!=null)?$leIntervention['dateAffectation']:''?>"></td>
         </tr>
         
         <tr>
-            <td> libelleMateriel </td>
+            <td style="color: white;"> libelleMateriel </td>
             <td> <input type="text" name="libelleMateriel"
                 value="<?= ($leIntervention!=null)?$leIntervention['libelleMateriel']:''?>"></td>
         </tr>

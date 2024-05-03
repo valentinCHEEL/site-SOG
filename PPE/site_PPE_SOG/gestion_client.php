@@ -90,6 +90,5 @@
 
     <p id="contact">Contact : 06 31 49 30 80 | SOG.pro@gmail.com</p>
   </footer>
-
 </body>
 </html>

@@ -11,6 +11,16 @@
 			}
 		}
 
+		public function verifConnexion ($nomClient, $mdp){
+			$requete= "SELECT * FROM Client WHERE nomClient=:nomClient and passwordc=:mdp";
+			$select = $this->unPDO->prepare($requete);
+			$select->bindValue (":nomClient", $nomClient, PDO::PARAM_STR);
+			$select->bindValue (":mdp", $mdp, PDO::PARAM_STR);
+			$select->execute (); 
+			$unUser = $select->fetch ();
+			return $unUser;
+		}
+
 				/**********Gestion des techniciens*********/
 
 		public function selectAllTechniciens (){
@@ -69,16 +79,16 @@
 
 
         /**********Gestion des interventions*********/
-		public function selectAllInterventions (){
-			$requete = "select * from intervention;" ;
+		public function selectAllInterventions ( $numClient){
+			$requete = "select * from intervention where numClient= ". $numClient.";" ;
 			$select = $this-> unPDO->prepare ($requete);
 			$select->execute ();
 			return $select->fetchAll();
 		}
 
-		public function searchAllInterventions ($filtre){
+		public function searchAllInterventions ($filtre,  $numClient){
 			$requete = "select * from intervention
-					where dateAffectation like :filtre or libelleMateriel like :filtre;" ;
+					where numClient= ".$numClient." or dateAffectation like :filtre or libelleMateriel like :filtre;" ;
 			$donnees=array(":filtre"=> "%".$filtre."%");
 			$select = $this-> unPDO->prepare ($requete);
 			$select->execute ($donnees);
@@ -86,17 +96,15 @@
 		}
 
 		public function insertIntervention($tab){
-			$requete = "insert into intervention values (null, :dateAffectation, null, null, :etat, :libelleMateriel, 1, 1); " ;
+		$requete = "insert into intervention values (null, :dateAffectation, null, null, null, :libelleMateriel, 1, :numClient);";
 			//j'ai mis 1 car dans la table j'ai inserer un technicien avec 1 comme matricule comme il en not null obliger
-			//de faire ça !!!
-			//jai enlever le null de l'etat
 			$donnees =array(":dateAffectation"=>$tab['dateAffectation'],
 							//":dateArrive"=>$tab['dateArrive'],
 							//":dateFin"=>$tab['dateFin'],
-							":etat"=>$tab['etat'],
-							":libelleMateriel"=>$tab['libelleMateriel']
+							//":etat"=>$tab['etat'],
+							":libelleMateriel"=>$tab['libelleMateriel'],
 							//":matricule"=>$tab['matricule'],	
-							//":numClient"=>$tab['numClient']
+							":numClient"=>$_SESSION['numClient']
 							);
 			$select = $this->unPDO->prepare ($requete);
 			$select->execute ($donnees);

@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  require('config.php');
+  require_once("controleur/controleur.class.php");
+  $unControleur = new Controleur();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,22 +25,20 @@
 </head>
 <body>
 <?php
-require('config.php');
-session_start();
+
 
 if (isset($_POST['nomClient'])){
   $nomClient = stripslashes($_REQUEST['nomClient']);
   $nomClient = mysqli_real_escape_string($conn, $nomClient);
   $passwordc = stripslashes($_REQUEST['passwordc']);
   $passwordc = mysqli_real_escape_string($conn, $passwordc);
-    $query = "SELECT * FROM Client WHERE nomClient='$nomClient' and passwordc='$passwordc'";
-  $result = mysqli_query($conn,$query) or die(mysql_error());
-  $rows = mysqli_num_rows($result);
-  $client = mysqli_fetch_assoc($result);
-  if($rows==1){
-      $_SESSION['nomClient'] = $nomClient;
+  
+  $client = $unControleur->verifConnexion ( $nomClient, $passwordc );
+ 
+  if($client != null){
+      $_SESSION['nomClient'] =  $client['nomClient'];
       //pour récupérer l'id du client
-      $_SESSION['numClient']= $client['numCLient'];
+      $_SESSION['numClient']= $client['numClient'];
 
       $_SESSION['client'] = $client; 
       header("Location: index.php");

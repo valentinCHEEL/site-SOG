@@ -86,9 +86,9 @@
 			return $select->fetchAll();
 		}
 
-		public function searchAllInterventions ($filtre,  $numClient){
+		public function searchAllInterventions ($filtre, $numClient){
 			$requete = "select * from intervention
-					where numClient= ".$numClient." or dateAffectation like :filtre or libelleMateriel like :filtre;" ;
+					where numClient= ".$numClient." and dateAffectation like :filtre or libelleMateriel like :filtre;" ;
 			$donnees=array(":filtre"=> "%".$filtre."%");
 			$select = $this-> unPDO->prepare ($requete);
 			$select->execute ($donnees);

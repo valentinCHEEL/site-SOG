@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles/login.css" />
+  <link rel="stylesheet" href="styles/login.css"/>
   <script>
     function togglePassword() {
       var passwordField = document.getElementById("passwordc");
@@ -25,8 +25,6 @@
 </head>
 <body>
 <?php
-
-
 if (isset($_POST['nomClient'])){
   $nomClient = stripslashes($_REQUEST['nomClient']);
   $nomClient = mysqli_real_escape_string($conn, $nomClient);
@@ -37,10 +35,19 @@ if (isset($_POST['nomClient'])){
  
   if($client != null){
       $_SESSION['nomClient'] =  $client['nomClient'];
+      $_SESSION['adresse'] =  $client['adresse'];
+      $_SESSION['ville'] =  $client['ville'];
+      $_SESSION['codePostal'] =  $client['codePostal'];
+      $_SESSION['numTel'] =  $client['numTel'];
+      $_SESSION['adressemail'] =  $client['adressemail'];
+      $_SESSION['passwordc'] =  $client['passwordc'];
+
+
+
       //pour récupérer l'id du client
       $_SESSION['numClient']= $client['numClient'];
 
-      $_SESSION['client'] = $client; 
+      
       header("Location: index.php");
   }else{
     $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";

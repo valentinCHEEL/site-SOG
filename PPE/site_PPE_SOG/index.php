@@ -35,20 +35,25 @@ $nomClient = $_POST['nomClient'];
     <h4> Votre entreprise d'informatique préféré </h4>
 
   </header>
+  <center>
+    <p>
+      <?php if(isset($_SESSION['numClient']) && isset($_SESSION['nomClient'])): ?>
+                  <h4 style="color: white;">Vous êtes connecté en tant que : 
+                      <?php
+                      echo "Nom du client : " . $_SESSION['nomClient'];
+                      echo "<br>Numéro du client : " . $_SESSION['numClient'];
+                      ?>
+                  </h4>
+        <?php endif; ?>
+    </p>
+  </center>
 
   <section class ="main" id="intervention">
     <div class="content">
       <div class="card">
         <div class="left">
           <h1>Nos interventions</h1>
-            <?php if(isset($_SESSION['numClient']) && isset($_SESSION['nomClient'])): ?>
-                <h4>Vous êtes connecté en tant que : 
-                    <?php
-                    echo "Nom du client : " . $_SESSION['nomClient'];
-                    echo "<br>Numéro du client : " . $_SESSION['numClient'];
-                    ?>
-                </h4>
-            <?php endif; ?>
+            
           <p> Nous intervenons sur tout type de problème quel soit logistique et matériel. Découvrer notre page intervention</p>
         </div>
 

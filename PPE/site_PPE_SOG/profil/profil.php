@@ -29,12 +29,8 @@ session_start();
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        Kshiti Ghelani
+                                        <?php echo $_SESSION['nomClient']; ?>
                                     </h5>
-                                    <h6>
-                                        Web Developer and Designer
-                                    </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -46,6 +42,7 @@ session_start();
                         </div>
                     </div>
                     <div class="col-md-2">
+                        <!-- Test -->
                         <a href="paramettre_profil.php" class="btn-modifier">Modifier</a>
                     </div>
                 </div>
@@ -54,18 +51,21 @@ session_start();
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>User Id</label>
+                                                <label> Adresse </label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti123</p>
+
+                                              <h5>
+                                                <?php echo $_SESSION['adresse'];  ?>
+                                            </h5>>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Name</label>
+                                                <label>Code Postal</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti Ghelani</p>
+                                                
                                             </div>
                                         </div>
                                         <div class="row">

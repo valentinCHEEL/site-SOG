@@ -117,14 +117,14 @@ insert into user values
 
 /* a voir c un test*/
 insert into technicien values 
-    (null, "val", "val","oui", 12);
+    (null, "CHEEL", "valentin","oui", 12);
 
 /* insertion de client*/
 insert into client values
-(null, "cc", "12 rue des fleurs", "Paris", "95000", "0164641574","c@gmail.com", "1234!AZERTYeza",  "Particulier", "");
+(null, "Guts", "12 rue des fleurs", "Paris", "95000", "0164641574","c@gmail.com", "1234!AZERTYeza",  "Particulier", "");
 
 insert into client values
-(null, "mm", "15 rue des fleurs", "Paris", "95000", "0164641575","m@gmail.com", "1234!AZERTYeza",  "Entreprise", "12345678901237");
+(null, "Vegeto", "15 rue des fleurs", "Paris", "95000", "0164641575","m@gmail.com", "1234!AZERTYeza",  "Entreprise", "12345678901237");
 
 /* insert intervention */
 

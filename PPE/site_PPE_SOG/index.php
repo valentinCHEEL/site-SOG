@@ -38,10 +38,10 @@ $nomClient = $_POST['nomClient'];
   <center>
     <p>
       <?php if(isset($_SESSION['numClient']) && isset($_SESSION['nomClient'])): ?>
-                  <h4 style="color: white;">Vous êtes connecté en tant que : 
+                  <h4 style="color: white;">Vous êtes connecté en tant que 
                       <?php
-                      echo "Nom du client : " . $_SESSION['nomClient'];
-                      echo "<br>Numéro du client : " . $_SESSION['numClient'];
+                      echo   $_SESSION['nomClient'];
+                      echo "<br>Numéro client : " . $_SESSION['numClient'];
                       ?>
                   </h4>
         <?php endif; ?>

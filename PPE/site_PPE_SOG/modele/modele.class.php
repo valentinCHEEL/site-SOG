@@ -134,6 +134,7 @@
 			$select = $this->unPDO->prepare ($requete);
 			$select->execute ($donnees);
 		}
+		
 	/**********Gestion des clients*********/
 		public function selectAllClients (){
 			$requete = "SELECT * FROM client;" ;

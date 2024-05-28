@@ -17,19 +17,15 @@
     <div class ="onglets";>
       <a href="index.php">Accueil</a>
       <a href="gestion_intervention.php">Intervention</a>
-      <a href="contact.php">Contact</a>
-      <a href="">A propos</a>
     </div>
     <div class="profil">
       <a href="profil/profil.php">Votre Profil</a>
       </div>
     </div>
-
 </nav>
 <header>
     <h1>Solution d'Organisation et de Gestion </h1>
     <h4> Votre entreprise d'informatique préféré </h4>
-
 </header>
 
 <section class ="main" id="intervention">
@@ -39,7 +35,11 @@
 
 <center>
   <h2 style="color: white;">Gestion des Interventions</h2>
-
+  <p>
+    Veuillez remplir le formulaire pour permettre aux technicien d'intervenir le plus efficacement
+    et réserver un crénaux.<br>
+    Nos Technitiens s'occupe du reste.
+  </p>
   <?php
 
       $leIntervention = null; //INTERVENTION a modifier

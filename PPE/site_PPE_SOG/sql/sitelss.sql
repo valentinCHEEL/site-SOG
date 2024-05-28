@@ -121,10 +121,10 @@ insert into technicien values
 
 /* insertion de client*/
 insert into client values
-(null, "Guts", "12 rue des fleurs", "Paris", "95000", "0164641574","c@gmail.com", "1234!AZERTYeza",  "Particulier", "");
+(null, "Guts", "12 rue des fleurs", "Paris", "95000", "0164641574","Guts@gmail.com", "1234!AZERTYeza",  "Particulier", "");
 
 insert into client values
-(null, "Vegeto", "15 rue des fleurs", "Paris", "95000", "0164641575","m@gmail.com", "1234!AZERTYeza",  "Entreprise", "12345678901237");
+(null, "Vegeto", "15 rue des fleurs", "Paris", "95000", "0164641575","Vegeto@gmail.com", "1234!AZERTYeza",  "Entreprise", "12345678901237");
 
 /* insert intervention */
 

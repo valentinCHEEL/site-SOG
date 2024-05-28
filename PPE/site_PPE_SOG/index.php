@@ -2,8 +2,10 @@
 <?php
 session_start();
 // Initialiser les variables de session
-$numClient = $_SESSION['client']['numClient'];
-$nomClient = $_POST['nomClient'];
+/*
+  $numClient = $_SESSION['client']['numClient'];
+  $nomClient = $_POST['nomClient'];
+*/
 ?>
 
 
@@ -21,8 +23,6 @@ $nomClient = $_POST['nomClient'];
     <div class ="onglets";>
       <a href="index.php">Accueil</a>
       <a href="gestion_intervention.php">Intervention</a>
-      <a href="contact.php">Contact</a>
-      <a href="">A propos</a>
     </div>
     <div class="profil">
       <a href="profil/profil.php">Votre Profil</a>
@@ -33,7 +33,6 @@ $nomClient = $_POST['nomClient'];
   <header>
     <h1>Solution d'Organisation et de Gestion </h1>
     <h4> Votre entreprise d'informatique préféré </h4>
-
   </header>
   <center>
     <p>

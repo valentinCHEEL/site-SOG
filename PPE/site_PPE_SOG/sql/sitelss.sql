@@ -77,7 +77,7 @@ use sog;
     BEFORE INSERT ON intervention
     FOR EACH ROW
     BEGIN
-        SET NEW.etat = 'en cours';
+        SET new.etat = 'en cours';
     END//
     delimiter ;
 
@@ -110,7 +110,7 @@ CREATE TABLE user (
     role ENUM('admin','user')
 );
 
-/* pour se connecter a l'appli java*/
+/* pour se connecter a l'appli java */
 insert into user values 
     (null, "Kilian","Schaar", "a@gmail.com", "123", "admin"),
     (null, "Valentin", "Cheel", "b@gmail.com", "456", "user");
@@ -129,20 +129,29 @@ insert into client values
 /* insert intervention */
 
 insert into intervention values
-(null," 2024-06-10", null, null, null, "mac", 1, 1);
+(null," 2024-06-10 12:09:45", null, null, null, "mac", 1, 1);
 
 insert into intervention values
-(null," 2025-06-10", null, null, null, "Imprimante", 1, 1);
+(null," 2025-06-10 13:50:05", null, null, null, "Imprimante", 1, 1);
 
 insert into intervention values
-(null," 2023-06-10", null, null, "terminer", "Ipad", 1, 1);
+(null," 2023-06-10 10:10:00", null, null, "terminer", "Ipad", 1, 1);
 
 
 insert into intervention values
-(null," 2024-06-10", null, null, null, "mac", 1, 2);
+(null," 2024-06-10 03:17:45", null, null, null, "mac", 1, 2);
 
 insert into intervention values
-(null," 2025-06-10", null, null, null, "Imprimante", 1, 2);
+(null," 2025-06-10 22:23:09", null, null, null, "Imprimante", 1, 2);
 
 insert into intervention values
-(null," 2023-06-10", null, null, "terminer", "Ipad", 1, 2);
+(null," 2023-06-10 17:15:00", null, null, "terminer", "Ipad", 1, 2);
+
+update intervention
+set etat ="terminer"
+where numI = 3;
+
+update intervention
+set etat ="terminer"
+where numI = 5;
+

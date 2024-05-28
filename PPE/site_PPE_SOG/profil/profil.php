@@ -103,8 +103,8 @@ session_start();
                     </div>
                 </div>
             </form> 
-            <a href="../logout.php">Déconnexion</a>   
-            <a href="../index.php" class="btn-retour">Retour</a>       
+            &nbsp;&nbsp;&nbsp;<a href="../logout.php" style="color: white;">Déconnexion</a> <br>  
+            &nbsp;&nbsp;&nbsp;<a href="../index.php" class="btn-retour" style="color: white;">Retour</a>       
         </div>
     </div>
 </body>

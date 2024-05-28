@@ -69,32 +69,32 @@ use sog;
     end //
     delimiter ;
 
-/* a voir pour faire marcher le trigger :*/
-    --trigger pour lors de l'insertion d'une intervention 
-drop trigger if exists insertIntervention;
-delimiter //
-CREATE TRIGGER insertIntervention
-BEFORE INSERT ON intervention
-FOR EACH ROW
-BEGIN
-    SET NEW.etat = 'en cours';
-END//
-delimiter ;
+    /* a voir pour faire marcher le trigger :*/
+        --trigger pour lors de l'insertion d'une intervention 
+    drop trigger if exists insertIntervention;
+    delimiter //
+    CREATE TRIGGER insertIntervention
+    BEFORE INSERT ON intervention
+    FOR EACH ROW
+    BEGIN
+        SET NEW.etat = 'en cours';
+    END//
+    delimiter ;
 
 
--- pour hashe ke mdp en sha1 lors de l'insertion
-/*
-drop trigger if exists insertClient;
-delimiter //
-CREATE TRIGGER insertClient
-BEFORE INSERT ON client
-FOR EACH ROW
-BEGIN
-    set new.passwordc = concat(sha1(passwordc));
-END//
-delimiter ;
+    -- pour hashe ke mdp en sha1 lors de l'insertion
+    /*
+    drop trigger if exists insertClient;
+    delimiter //
+    CREATE TRIGGER insertClient
+    BEFORE INSERT ON client
+    FOR EACH ROW
+    BEGIN
+        set new.passwordc = concat(sha1(passwordc));
+    END//
+    delimiter ;
 
-*/
+    */
 
 
 
@@ -110,6 +110,7 @@ CREATE TABLE user (
     role ENUM('admin','user')
 );
 
+/* pour se connecter a l'appli java*/
 insert into user values 
     (null, "Kilian","Schaar", "a@gmail.com", "123", "admin"),
     (null, "Valentin", "Cheel", "b@gmail.com", "456", "user");
@@ -117,3 +118,31 @@ insert into user values
 /* a voir c un test*/
 insert into technicien values 
     (null, "val", "val","oui", 12);
+
+/* insertion de client*/
+insert into client values
+(null, "cc", "12 rue des fleurs", "Paris", "95000", "0164641574","c@gmail.com", "1234!AZERTYeza",  "Particulier", "");
+
+insert into client values
+(null, "mm", "15 rue des fleurs", "Paris", "95000", "0164641575","m@gmail.com", "1234!AZERTYeza",  "Entreprise", "12345678901237");
+
+/* insert intervention */
+
+insert into intervention values
+(null," 2024-06-10", null, null, null, "mac", 1, 1);
+
+insert into intervention values
+(null," 2025-06-10", null, null, null, "Imprimante", 1, 1);
+
+insert into intervention values
+(null," 2023-06-10", null, null, "terminer", "Ipad", 1, 1);
+
+
+insert into intervention values
+(null," 2024-06-10", null, null, null, "mac", 1, 2);
+
+insert into intervention values
+(null," 2025-06-10", null, null, null, "Imprimante", 1, 2);
+
+insert into intervention values
+(null," 2023-06-10", null, null, "terminer", "Ipad", 1, 2);

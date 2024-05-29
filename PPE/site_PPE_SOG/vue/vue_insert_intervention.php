@@ -9,13 +9,13 @@
     <table>
         
         <tr>
-            <td style="color: white;"> dateAffectation </td>
+            <td style="color: white;"> date réservation </td>
             <td> <input type="datetime-local" name="dateAffectation"
                 value="<?= ($leIntervention!=null)?$leIntervention['dateAffectation']:''?>"></td>
         </tr>
         
         <tr>
-            <td style="color: white;"> libelleMateriel </td>
+            <td style="color: white;"> Matériels défectueux </td>
             <td> <input type="text" name="libelleMateriel"
                 value="<?= ($leIntervention!=null)?$leIntervention['libelleMateriel']:''?>"></td>
         </tr>

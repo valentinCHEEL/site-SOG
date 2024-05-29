@@ -11,7 +11,7 @@ session_start();
     
 </head>
 <body>
-    <h2>Modifier les informations du client</h2>
+    <h2>Modifier les informations de <?php echo $_SESSION['nomClient']?> !</h2>
     <form action="modifier_profil.php" method="post">
         <label for="nomClient">Nom:</label><br>
         <input type="text" id="nomClient" name="nom" value ="<?= $_SESSION['client']['nomClient'] ?>" ><br>

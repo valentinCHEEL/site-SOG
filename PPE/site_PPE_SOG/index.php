@@ -37,9 +37,9 @@ session_start();
   <center>
     <p>
       <?php if(isset($_SESSION['numClient']) && isset($_SESSION['nomClient'])): ?>
-                  <h4 style="color: white;">Vous êtes connecté en tant que 
+                  <h4 style="color: white;">Bienvenue 
                       <?php
-                      echo   $_SESSION['nomClient'];
+                      echo   $_SESSION['nomClient'] ."&nbsp;&nbsp;!";
                       echo "<br>Numéro client : " . $_SESSION['numClient'];
                       ?>
                   </h4>

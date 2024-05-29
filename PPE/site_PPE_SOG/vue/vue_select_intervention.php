@@ -1,5 +1,5 @@
 
-<h3 style="color: white;"> Liste des interventions</h3>
+<h3 style="color: white;"> Liste de vos interventions</h3>
 <form method="post" style="color: white;">
     Filter par : <input type="text" name="filtre">
     <input type="submit" name="Filtrer" value="Filtrer">
@@ -12,7 +12,7 @@
         <td> dateArrive</td>
         <td> dateFin</td>
         <td> etat</td>
-        <td> libelleMateriel </td>
+        <td> Les matéeriels </td>
         <td> matricule</td>
         <td> numClient</td>
     </tr>

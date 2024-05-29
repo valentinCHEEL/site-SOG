@@ -132,7 +132,7 @@ insert into intervention values
 (null," 2024-06-10 12:09:45", null, null, null, "mac", 1, 1);
 
 insert into intervention values
-(null," 2025-06-10 13:50:05", null, null, null, "Imprimante", 1, 1);
+(null," 2025-06-10 13:50:05", null, null, null, "Imprimante, clavier", 1, 1);
 
 insert into intervention values
 (null," 2023-06-10 10:10:00", null, null, "terminer", "Ipad", 1, 1);

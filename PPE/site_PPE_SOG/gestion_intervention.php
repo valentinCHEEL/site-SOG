@@ -36,8 +36,8 @@
 <center>
   <h2 style="color: white;">Gestion des Interventions</h2>
   <p>
-    Veuillez remplir le formulaire pour permettre aux technicien d'intervenir le plus efficacement
-    et réserver un crénaux.<br>
+    Veuillez remplir le formulaire afin de permettre aux techniciens d'intervenir le plus efficacement
+    et rapidement possible et réserver un crénaux.<br>
     Nos Technitiens s'occupe du reste.
   </p>
   <?php

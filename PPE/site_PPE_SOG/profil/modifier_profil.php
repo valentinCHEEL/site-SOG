@@ -2,17 +2,18 @@
 session_start();
 
 // Connexion à la base de données
-/*
+
 $servername = "localhost";
 $nom = "root";
 $passwordc = "";
 $database = "sog";
 
 $conn = new mysqli($servername, $nom, $passwordc, $database);
+
 if ($conn->connect_error) {
     die("La connexion a échoué: " . $conn->connect_error);
 }
-*/
+
 
 // Récupération des données du formulaire
 $numClient = $_SESSION['client']['numClient'];

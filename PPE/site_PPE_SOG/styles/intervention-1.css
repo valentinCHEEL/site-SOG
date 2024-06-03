@@ -248,7 +248,16 @@ p.errorMessage {
 footer #contact{
   color: rgb(181, 181, 181);
 }
-
+/*imzges technicien */
+.tech{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
 
 @media screen and (max-width:600px) { /* onglet pour tel*/
 

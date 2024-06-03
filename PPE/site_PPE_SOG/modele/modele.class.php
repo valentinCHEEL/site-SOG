@@ -201,6 +201,13 @@
 			$select->execute($donnees);
 		}
 
+	/*********Gestion du tableau de bord ***********/
+	public function selectAllInterventionsTechniciens ( $numI){
+		$requete = "select * from intervention;" ;
+		$select = $this-> unPDO->prepare ($requete);
+		$select->execute ();
+		return $select->fetchAll();
+	}
 
 	}
 ?>

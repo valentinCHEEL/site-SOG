@@ -1,7 +1,11 @@
 <?php
 session_start();
-?>
 
+if ($conn->connect_error) {
+    die("La connexion a échoué: " . $conn->connect_error);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +15,10 @@ session_start();
     
 </head>
 <body>
-    <h2>Modifier les informations de <?php echo $_SESSION['nomClient']?> !</h2>
+    <h2>Modifier les informations de <?php echo $_SESSION['nomClient']?> </h2>
     <form action="modifier_profil.php" method="post">
         <label for="nomClient">Nom:</label><br>
-        <input type="text" id="nomClient" name="nom" value ="<?= $_SESSION['client']['nomClient'] ?>" ><br>
+        <input type="text" id="nomClient" name="nom" value="<?php echo htmlspecialchars($_SESSION['client']['nomClient'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" required>
 
         <label for="adresse">Adresse:</label><br>
         <input type="text" id="adresse" name="adresse" value ="<?= $_SESSION['client']['adresse'] ?>" ><br>

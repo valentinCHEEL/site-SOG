@@ -38,7 +38,11 @@
   <p>
     Veuillez remplir le formulaire afin de permettre aux techniciens d'intervenir le plus efficacement
     et rapidement possible et réserver un crénaux.<br>
+    Vérifier que votre compte sois bien à jours.
+    <br><br>
     Nos Technitiens s'occupe du reste.
+
+    
   </p>
   <?php
 

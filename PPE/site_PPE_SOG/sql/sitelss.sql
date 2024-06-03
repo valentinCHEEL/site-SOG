@@ -58,13 +58,13 @@ use sog;
     drop trigger if exists verifsiret;
     delimiter //
     create trigger verifsiret
-    after insert on Client
+    before insert on Client
     for each row
     begin
-    if (select length(new.siret))>14 and new.typeClient='Entreprise'
+    if (select length(new.siret))<>14 and new.typeClient='Entreprise' 
     then 
     signal sqlstate'45000'
-    set message_text='erreur saisie siret';
+    set message_text='Le num siret si vous êtes une entreprise ne convient pas';
     end if;
     end //
     delimiter ;
@@ -95,10 +95,6 @@ use sog;
     delimiter ;
 
     */
-
-
-
-
 
     --connexion pour le client lourd
 CREATE TABLE user (
@@ -154,4 +150,3 @@ where numI = 3;
 update intervention
 set etat ="terminer"
 where numI = 5;
-

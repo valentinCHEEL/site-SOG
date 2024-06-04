@@ -14,7 +14,7 @@
     <center>
         <h1> Intervention </h2>
      
-  <li><a href="tableau_de_bord.php">Intervention</a></li>
+  <li><a href="gestion_intervention.php">Intervention</a></li>
 
     </center>
 </body>

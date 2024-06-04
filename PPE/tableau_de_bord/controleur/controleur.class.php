@@ -6,8 +6,9 @@ class Controleur {
         public function __construct (){
             $this->unModele = new Modele ();
         }
+
    /*********************Gestion technicien******************/
-   
+/*
 public function selectAllTechniciens(){
     return $this->unModele->selectAllTechniciens();
 }
@@ -29,7 +30,7 @@ public function selectWhereTechnicien($matricule){
 public function updateTechnicien ($tab){
     return $this->unModele->updateTechnicien($tab);
 }
-
+*/
   /*********************Gestion intervention***************** */
   public function selectAllInterventions(){
     return $this->unModele->selectAllInterventions();

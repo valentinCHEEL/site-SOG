@@ -12,7 +12,7 @@
 		}
 
 				/**********Gestion des techniciens*********/
-
+/*
 		public function selectAllTechniciens (){
 			$requete = "select * from technicien ;" ;
 			$select = $this-> unPDO->prepare ($requete);
@@ -65,6 +65,7 @@
 			$select = $this->unPDO->prepare ($requete);
 			$select->execute ($donnees);
 		}
+*/
         /**********Gestion des interventions tableau de bord*********/
 		public function selectAllInterventions (){
 			$requete = "select * from intervention;" ;

@@ -115,6 +115,12 @@ insert into user values
 insert into technicien values 
     (null, "CHEEL", "valentin","oui", 12);
 
+insert into technicien values 
+    (null, "Rick", "Shane","oui", 30);
+
+insert into technicien values 
+    (null, "Glenn", "Parcker","non", 10);
+
 /* insertion de client*/
 insert into client values
 (null, "Guts", "12 rue des fleurs", "Paris", "95000", "0164641574","Guts@gmail.com", "1234!AZERTYeza",  "Particulier", "");

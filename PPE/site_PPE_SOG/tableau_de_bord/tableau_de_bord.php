@@ -13,6 +13,24 @@
     <body>
         <center>
             <h1>Tableau de bord </h1>
+            <?php
+
+                $leInterventionT = null; //INTERVENTION a modifier
+                if (isset($_GET['action']) && isset($_GET['numI']))
+                {
+                    $action = $_GET['action'];
+                    $numI = $_GET['numI'];
+
+                    switch($action)
+                    {
+                        /*case "sup" : $unControleur->deleteInterventionT($numI); 
+                        break;*/
+                        
+                        case "edit" :$leInterventionT=$unControleur->selectWhereInterventionTechnicien ($numI);         
+                        break;
+                    }
+                }
+                ?>
             <?php  require_once ("../vue/vue_select_tableau_de_bord.php"); ?>
         </center>
     </body>

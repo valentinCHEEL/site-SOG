@@ -86,8 +86,13 @@ class Controleur {
         }
     
     /*******************Gestion du tableau de bord *********/
-    public function selectAllInterventionsTechniciens($numI){
-        return $this->unModele->selectAllInterventionsTechniciens( $numI);
+    public function selectAllInterventionsTechniciens(){
+        return $this->unModele->selectAllInterventionsTechniciens();
     }
+
+    public function selectWhereInterventionTechnicien($numI){
+        return $this->unModele->selectWhereInterventionTechnicien($numI);
+    }
+
     }
 ?>

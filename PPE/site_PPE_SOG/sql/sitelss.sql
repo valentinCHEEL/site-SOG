@@ -24,6 +24,7 @@ use sog;
         prenomT varchar(100),
         disponibilite enum("oui","non"),
         tarifHoraire decimal(5,2),
+        mdp varchar(100),
         primary key (matricule)
     );
     
@@ -113,13 +114,13 @@ insert into user values
 
 /* a voir c un test*/
 insert into technicien values 
-    (null, "CHEEL", "valentin","oui", 12);
+    (null, "CHEEL", "valentin","oui", 12, "1234!AZERTYaze");
 
 insert into technicien values 
-    (null, "Rick", "Shane","oui", 30);
+    (null, "Rick", "Shane","oui", 30, "1234!AZERTYaze");
 
 insert into technicien values 
-    (null, "Glenn", "Parcker","non", 10);
+    (null, "Glenn", "Parcker","non", 10, "1234!AZERTYaze");
 
 /* insertion de client*/
 insert into client values

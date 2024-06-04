@@ -21,6 +21,16 @@
 			return $unUser;
 		}
 
+		/**ajoute pour creer une session au technicien */
+		public function verifConnexionTechnicien($nomT, $mdp) {
+			$requete = "SELECT * FROM technicien WHERE nomT=:nomT AND mdp=:mdp";
+			$select = $this->unPDO->prepare($requete);
+			$select->bindValue(":nomT", $nomT, PDO::PARAM_STR);
+			$select->bindValue(":mdp", $mdp, PDO::PARAM_STR);
+			$select->execute();
+			return $select->fetch(PDO::FETCH_ASSOC);
+		}
+
 				/**********Gestion des techniciens*********/
 
 		public function selectAllTechniciens (){

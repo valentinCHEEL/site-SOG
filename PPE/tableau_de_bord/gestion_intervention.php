@@ -1,9 +1,22 @@
+<?php 
+session_start();
+?>
+
 <?php
    require_once("controleur/controleur.class.php");
     $unControleur = new Controleur();
 ?>
-
-<h2>Gestion des Interventions</h2>
+<center>
+<p>
+    <?php 
+        echo "<br>Matricule : " . $_SESSION['numTechnicien'];
+    ?>
+</p>
+<h2>Voici les interventions à prendre sur le planning 
+    <?php
+        echo $_SESSION['nomT'] . "&nbsp;&nbsp;" .$_SESSION['prenomT'] . "&nbsp;&nbsp;!!!";
+    ?>
+</h2>
 
 <?php
     $leIntervention = null; //INTERVENTION a modifier
@@ -45,3 +58,4 @@
     require_once ("vue/vue_select_intervention.php");
 
 ?>
+</center>

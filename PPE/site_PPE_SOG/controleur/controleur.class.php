@@ -10,6 +10,11 @@ class Controleur {
         public function verifConnexion ( $nomClient, $passwordc ){
             return $this->unModele->verifConnexion($nomClient, $passwordc);
         }
+        /*Ajout pour permettre de voir si c un technicien */
+        public function verifConnexionTechnicien($nomT, $mdp) {
+            return $this->unModele->verifConnexionTechnicien($nomT, $mdp);
+        }
+
    /*********************Gestion technicien******************/
    
         public function selectAllTechniciens(){

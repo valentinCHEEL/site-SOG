@@ -114,13 +114,20 @@
 		}
 		
 		public function updateIntervention ($tab){															  
-			$requete ="update intervention set dateAffectation=:dateAffectation, dateArrive=:dateArrive,
-			dateFin=:dateFin, etat=:etat, libelleMateriel=:libelleMateriel where numI= :numI;";
+			$requete ="update intervention set dateAffectation=:dateAffectation, 
+												dateArrive=:dateArrive,
+												dateFin=:dateFin, 
+												etat=:etat, 
+												libelleMateriel=:libelleMateriel,
+												matricule=:matricule
+												where numI= :numI;";
+			
 			$donnees=array(	":dateAffectation"=>$tab['dateAffectation'],
 							":dateArrive"=>$tab['dateArrive'],
 							":dateFin"=>$tab['dateAffectation'],
 							":etat"=>$tab['etat'],
 							":libelleMateriel"=>$tab['libelleMateriel'],
+							":matricule" => $_SESSION['matricule'],
 							":numI"=>$tab['numI']
 						);
 			$select = $this->unPDO->prepare ($requete);

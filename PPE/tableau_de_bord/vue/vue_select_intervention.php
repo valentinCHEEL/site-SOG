@@ -1,6 +1,6 @@
 
-<h3> Liste des interventions</h3>
-<form method="post">
+<h3 style="color: white;"> Liste des interventions</h3>
+<form method="post" style="color: white;">
     Filter par : <input type="text" name="filtre">
     <input type="submit" name="Filtrer" value="Filtrer">
 </form>

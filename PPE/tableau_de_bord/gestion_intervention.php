@@ -6,13 +6,26 @@ session_start();
    require_once("controleur/controleur.class.php");
     $unControleur = new Controleur();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+    <link rel="stylesheet" href="../site_PPE_SOG/styles/intervention.css">
+</head>
+<body>
+<a href="index.php" class="back-button">Retour</a>
+</body>
+</html>
 <center>
 <p>
     <?php 
         echo "<br>Matricule : " . $_SESSION['numTechnicien'];
     ?>
 </p>
-<h2>Voici les interventions à prendre sur le planning 
+<h2 style="color: white;">Voici les interventions à prendre sur le planning 
     <?php
         echo $_SESSION['nomT'] . "&nbsp;&nbsp;" .$_SESSION['prenomT'] . "&nbsp;&nbsp;!!!";
     ?>

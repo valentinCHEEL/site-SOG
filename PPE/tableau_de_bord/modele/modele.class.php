@@ -118,8 +118,8 @@
 												dateArrive=:dateArrive,
 												dateFin=:dateFin, 
 												etat=:etat, 
-												libelleMateriel=:libelleMateriel,
-												matricule=:matricule
+												libelleMateriel=:libelleMateriel
+												
 												where numI= :numI;";
 			
 			$donnees=array(	":dateAffectation"=>$tab['dateAffectation'],
@@ -127,7 +127,7 @@
 							":dateFin"=>$tab['dateAffectation'],
 							":etat"=>$tab['etat'],
 							":libelleMateriel"=>$tab['libelleMateriel'],
-							":matricule" => $_SESSION['matricule'],
+						
 							":numI"=>$tab['numI']
 						);
 			$select = $this->unPDO->prepare ($requete);

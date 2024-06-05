@@ -114,13 +114,16 @@ insert into user values
 
 /* a voir c un test*/
 insert into technicien values 
-    (null, "CHEEL", "valentin","oui", 12, "1234!AZERTYaze");
+    (null, "PEGASUS", "valentin","oui", 12, "1234!AZERTYaze");
 
 insert into technicien values 
     (null, "Rick", "Shane","oui", 30, "1234!AZERTYaze");
 
 insert into technicien values 
     (null, "Glenn", "Parcker","non", 10, "1234!AZERTYaze");
+
+insert into technicien values 
+    (null, "Proust", "Christinaprout","non", 10, "1234!AZERTYaze");
 
 /* insertion de client*/
 insert into client values

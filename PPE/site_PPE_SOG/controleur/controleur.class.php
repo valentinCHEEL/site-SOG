@@ -90,14 +90,7 @@ class Controleur {
             return $this->unModele->updateClient($tab);
         }
     
-    /*******************Gestion du tableau de bord *********/
-    public function selectAllInterventionsTechniciens(){
-        return $this->unModele->selectAllInterventionsTechniciens();
-    }
 
-    public function selectWhereInterventionTechnicien($numI){
-        return $this->unModele->selectWhereInterventionTechnicien($numI);
-    }
 
     }
 ?>

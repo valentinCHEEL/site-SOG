@@ -1,4 +1,4 @@
-<h3> Les réservations de nos client</h3>
+<h3 style="color: white;"> Les réservations de nos client</h3>
 <style>
         body {
             background-image: url("images/arriereplan.jpg");
@@ -6,7 +6,7 @@
         }
         </style>
 <form method="post">
-    <table>
+    <table style="color: white;">
         <tr>
             <td> dateAffectation </td>
             <td> <input type="datetime-local" name="dateAffectation"

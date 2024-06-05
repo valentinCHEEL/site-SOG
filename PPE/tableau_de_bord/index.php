@@ -12,13 +12,14 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PPE SOG partie BACK</title>
+    <link rel="stylesheet" href="../site_PPE_SOG/styles/intervention.css">
 </head>
 <body>
     <center>
-        <h1> Intervention </h2>
-        <p>
+        <h1 style="color: white;"> Intervention </h2>
+        <p style="color: white;">
         <?php if(isset($_SESSION['numTechnicien']) && isset($_SESSION['nomT'])): ?>
-            <h4>Bienvenue technicien
+            <h4 style="color: white;">Bienvenue technicien
                 <?php
                 echo $_SESSION['nomT'] . "&nbsp;&nbsp;" .$_SESSION['prenomT'] . "&nbsp;&nbsp;!!!";
                 echo "<br>Matricule : " . $_SESSION['numTechnicien'];
@@ -29,6 +30,7 @@ session_start();
         </p>
      
   <li><a href="gestion_intervention.php">Tableau de bord</a></li>
+  <li><a href="../site_PPE_SOG/logout.php" style="color: white;">Déconnexion</a></li>
 
     </center>
 </body>

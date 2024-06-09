@@ -35,14 +35,11 @@
 
 
 <center>
-  <h2 style="color: white;">Gestion des Interventions</h2>
+  <h2 style="color: white;">Liste de vos intervention   <?php echo $_SESSION['nomClient']?> </h2>
   <p>
-    Veuillez remplir le formulaire afin de permettre aux techniciens d'intervenir le plus efficacement
-    et rapidement possible et réserver un crénaux.<br>
-    Vérifier que votre compte sois bien à jours.
-    <br><br>
-    Nos Technitiens s'occupe du reste.
-
+    Veuillez consulter régulièrement vos intervention ! <br>
+    Les techniciens accepteront vos intervention et changeront l'etat de celle-ci et vous
+    indiquera les dates heure disponnible
     
   </p>
   <?php
@@ -63,9 +60,8 @@
           }
       }
 
-
-      require_once ("vue/vue_insert_intervention.php");
-
+      
+      
       if (isset($_POST['Valider']))
       {
           $unControleur->insertIntervention ($_POST);
@@ -75,7 +71,7 @@
           $unControleur->updateIntervention ($_POST);
           header("location: gestion_intervention.php?");
       }
-/*
+
       if (isset($_POST['Filtrer']))
       {
           $filtre = $_POST['filtre'];
@@ -85,7 +81,7 @@
           $lesInterventions = $unControleur->selectAllInterventions ($_SESSION['numClient']);
       }
       require_once ("vue/vue_select_intervention.php");
-*/
+
   ?>
 </center>
 </section>

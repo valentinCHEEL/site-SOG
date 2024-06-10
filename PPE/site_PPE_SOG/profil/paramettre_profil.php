@@ -6,11 +6,12 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier les informations du client</title>
+    <title>Modifier les paramètre de votre compte</title>
 
 </head>
+<center>
 <body>
-    <h2>Modifier les informations du client</h2>
+    <h2>Modifier les paramètre de votre compte <?php echo $_SESSION['nomClient']?> </h2>
     <form action="modifier_profil.php" method="post">
         <label for="nomClient">Nom:</label><br>
         <input type="text" id="nomClient" name="nom" value ="<?= $_SESSION['nomClient'] ?>" ><br><br>
@@ -37,4 +38,5 @@ session_start();
     </form>
 
 </body>
+</center>
 </html>

@@ -28,7 +28,7 @@
 if (isset($_POST['nomClient'])){
   $nomClient = stripslashes($_REQUEST['nomClient']);
   $nomClient = mysqli_real_escape_string($conn, $nomClient);
-  $passwordc = stripslashes($_REQUEST['passwordc']);
+  $passwordc = sha1(stripslashes($_REQUEST['passwordc']));
   $passwordc = mysqli_real_escape_string($conn, $passwordc);
   
   // Vérifier si l'utilisateur est un client

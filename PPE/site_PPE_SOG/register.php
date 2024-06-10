@@ -57,7 +57,7 @@ if (isset($_REQUEST['nomClient'], $_REQUEST['adressemail'], $_REQUEST['passwordc
   $adressemail = stripslashes($_REQUEST['adressemail']);
   $adressemail = mysqli_real_escape_string($conn, $adressemail);
   // récupérer le mot de passe et supprimer les antislashes ajoutés par le formulaire
-  $passwordc = stripslashes($_REQUEST['passwordc']);
+  $passwordc = sha1(stripslashes($_REQUEST['passwordc']));
   $passwordc = mysqli_real_escape_string($conn, $passwordc);
   // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
   $typeClient = stripslashes($_REQUEST['typeClient']);

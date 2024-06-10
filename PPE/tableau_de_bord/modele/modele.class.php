@@ -133,5 +133,21 @@
 			$select = $this->unPDO->prepare ($requete);
 			$select->execute ($donnees);
 		}
+		/**********Gestion des clients tableau de bord*********/
+		public function selectAllClients (){
+			$requete = "SELECT * FROM client;" ;
+			$select = $this->unPDO->prepare($requete);
+			$select->execute();
+			return $select->fetchAll();
+		}
+
+		public function searchAllClients ($filtre){
+			$requete = "SELECT * FROM client
+						WHERE nomClient LIKE :filtre OR adresse LIKE :filtre OR ville LIKE :filtre OR codePostal LIKE :filtre;" ;
+			$donnees = array(":filtre" => "%" . $filtre . "%");
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+			return $select->fetchAll();
+		}
 	}
 ?>

@@ -68,7 +68,8 @@ session_start();
       <div class="card">
         <div class="left">
           <h1>A propos</h1>
-          <p> Qui nous somme ? Découvrer notre page a propos </p>
+          <p> L'entreprise SOG est une entreprise qui intervient si vous avez des problème de matériel 
+          électronique comme (imprimante, ordinateur, etc)</p>
         </div>
 
         <div class="right">

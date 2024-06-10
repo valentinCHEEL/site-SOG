@@ -45,9 +45,9 @@ use sog;
 
     create table Contrat (
         numContrat int(5) not null auto_increment,
-        dateFin date,
+        dateFin datetime,
         /* dateV = date limite ou de validitÃ© */
-        dateV date,
+        dateV datetime,
         /* montantMHt = montant mensuel ht */
         montantMHt decimal (10,3),
         numClient int(3) not null,
@@ -109,7 +109,7 @@ insert into technicien values
     (null, "Glenn", "Parcker","non", 10, "1234!AZERTYaze");
 
 insert into technicien values 
-    (null, "Proust", "Christinaprout","non", 10, "1234!AZERTYaze");
+    (null, "Doctor", "Who","non", 10, "1234!AZERTYaze");
 
 /* insertion de client*/
 insert into client values
@@ -128,6 +128,9 @@ insert into intervention values
 
 insert into intervention values
 (null," 2023-06-10 10:10:00", null, null, "terminer", "Ipad", 1, 1);
+
+insert into intervention values
+(null," 2023-07-10 18:50:00", "2023-07-10 18:15:00", "2023-06-10 19:30:00", "Accepter", "imprimante", 1, 1);
 
 
 

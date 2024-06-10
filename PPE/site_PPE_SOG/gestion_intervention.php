@@ -75,6 +75,8 @@
           $unControleur->updateIntervention ($_POST);
           header("location: gestion_intervention.php?");
       }
+      
+
 /*
       if (isset($_POST['Filtrer']))
       {
@@ -87,6 +89,14 @@
       require_once ("vue/vue_select_intervention.php");
 */
   ?>
+  <br><br>
+  <p>
+    Veuillez consulter votre liste des interventions passer pour l'annuler ou le modifier.
+    Consulter le régulièrement les techniciens changeront le statut et vous pourrez suivre l'avancement 
+    juste ici : <a href="liste_intervention.php">vos intervention</a>.
+    <br><br>
+    A bientôt <?php echo $_SESSION['nomClient'] ?>
+  </p>
 </center>
 </section>
   <footer>

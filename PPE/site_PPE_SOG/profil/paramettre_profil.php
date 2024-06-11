@@ -7,10 +7,11 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifier les paramètre de votre compte</title>
-
+    <link rel="stylesheet" href="../styles/tableau.css">
 </head>
 <center>
 <body>
+    <a href="profil.php">retour</a>
     <h2>Modifier les paramètre de votre compte <?php echo $_SESSION['nomClient']?> </h2>
     <form action="modifier_profil.php" method="post">
         <label for="nomClient">Nom:</label><br>

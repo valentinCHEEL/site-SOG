@@ -113,10 +113,10 @@ insert into technicien values
 
 /* insertion de client*/
 insert into client values
-(null, "Guts", "12 rue des fleurs", "Paris", "95000", "0164641574","Guts@gmail.com", "1234!AZERTYeza",  "Particulier", "");
+(null, "Guts", "12 rue des fleurs", "Paris", "95000", "0164641574","Guts@gmail.com", "1234!AZERTYaze",  "Particulier", "");
 
 insert into client values
-(null, "Vegeto", "15 rue des fleurs", "Paris", "95000", "0164641575","Vegeto@gmail.com", "1234!AZERTYeza",  "Entreprise", "12345678901237");
+(null, "Vegeto", "15 rue des fleurs", "Paris", "95000", "0164641575","Vegeto@gmail.com", "1234!AZERTYaze",  "Entreprise", "12345678901237");
 
 /* insert intervention */
 
@@ -153,3 +153,8 @@ where numI = 3;
 update intervention
 set etat ="terminer"
 where numI = 5;
+
+/* insertion contrat */
+
+insert into contrat values 
+(null,  "2023-07-10 18:50:00", "2023-07-10 18:50:00", "60.000", 2);

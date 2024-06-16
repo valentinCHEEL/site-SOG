@@ -134,6 +134,8 @@
 			$select->execute ($donnees);
 		}
 		/**********Gestion des clients tableau de bord*********/
+
+/*
 		public function selectAllClients (){
 			$requete = "SELECT * FROM client;" ;
 			$select = $this->unPDO->prepare($requete);
@@ -149,5 +151,113 @@
 			$select->execute($donnees);
 			return $select->fetchAll();
 		}
+
+		public function insertClient($tab){
+			$requete = "INSERT INTO client VALUES (null, :nomClient, :adresse, :ville, :codePostal, :numTel, 
+						:adressemail, :passwordc, :typeClient, :siret, :categorie);" ;
+			$donnees = array(":nomClient" => $tab['nomClient'],
+							":adresse" => $tab['adresse'],
+							":ville" => $tab['ville'],
+							":codePostal" => $tab['codePostal'],
+							":numTel" => $tab['numTel'],
+							":adressemail" => $tab['adressemail'],
+							":passwordc" => $tab['passwordc'],
+							":typeClient" => $tab['typeClient'],
+							":siret" => $tab['siret'],
+							":categorie" => $tab['categorie']
+						);
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+		}
+
+		public function deleteClient ($numClient){
+			$requete = "DELETE FROM client WHERE numClient = :numClient ;" ;
+			$donnees = array(":numClient" => $numClient);
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+		}
+
+		public function selectWhereClient ($numClient){
+			$requete = "SELECT * FROM client WHERE numClient = :numClient;" ;
+			$donnees = array(":numClient" => $numClient);
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+			$unClient = $select->fetch();
+			return $unClient;
+		}
+
+		public function updateClient ($tab){                                                              
+			$requete = "UPDATE client SET nomClient = :nomClient, adresse = :adresse, ville = :ville, codePostal = :codePostal, 
+			 			numTel = :numTel, adressemail = :adressemail, passwordc = :passwordc, typeClient = :typeClient, 
+						siret = :siret, categorie = :categorie WHERE numClient = :numClient;";
+			$donnees = array(":nomClient" => $tab['nomClient'],
+							":adresse" => $tab['adresse'],
+							":ville" => $tab['ville'],
+							":codePostal" => $tab['codePostal'],
+							":numTel" => $tab['numTel'],
+							":adressemail" => $tab['adressemail'],
+							":passwordc" => $tab['passwordc'],
+							":typeClient" => $tab['typeClient'],
+							":siret" => $tab['siret'],
+							":categorie" => $tab['categorie']
+							":numClient" => $tab['numClient']
+						);
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+		}
+		*/
+		/********gestion des categorie  ******/
+
+		public function selectAllCategories (){
+			$requete = "SELECT * FROM categorie;" ;
+			$select = $this->unPDO->prepare($requete);
+			$select->execute();
+			return $select->fetchAll();
+		}
+
+		public function searchAllCategories ($filtre){
+			$requete = "SELECT * FROM categorie
+						WHERE numClient LIKE :filtre OR libelleCategorie LIKE :filtre;" ;
+			$donnees = array(":filtre" => "%" . $filtre . "%");
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+			return $select->fetchAll();
+		}
+
+		public function insertCategorie($tab){
+			$requete = "INSERT INTO categorie VALUES (numClient, libelleCategorie);" ;
+			$donnees = array(
+							":numClient" => $tab['numCLient'],
+							":libelleCategorie" => $tab['libelleCategorie']
+						);
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+		}
+
+		public function deleteCategorie ($numClient){
+			$requete = "DELETE FROM categorie WHERE numClient = :numClient ;" ;
+			$donnees = array(":numClient" => $numClient);
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+		}
+
+		public function selectWhereCategorie ($numClient){
+			$requete = "SELECT * FROM categorie WHERE numClient = :numClient;" ;
+			$donnees = array(":numClient" => $numClient);
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+			$unClient = $select->fetch();
+			return $unClient;
+		}
+
+		public function updateCategorie ($tab){                                                              
+			$requete = "UPDATE categorie SET libelleCategorie = :libelleCategorie WHERE numClient = :numClient;";
+			$donnees = array(
+							":libelleCategorie" => $tab['libelleCategorie']
+						);
+			$select = $this->unPDO->prepare($requete);
+			$select->execute($donnees);
+		}
+
 	}
 ?>

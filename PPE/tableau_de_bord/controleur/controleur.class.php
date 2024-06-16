@@ -55,5 +55,30 @@ public function selectWhereIntervention($numI){
 public function updateIntervention ($tab){
     return $this->unModele->updateIntervention($tab);
 }
+
+  /*********************Gestion categorie***************** */
+  public function selectAllCategories(){
+    return $this->unModele->selectAllCategories();
+}
+
+public function searchAllCategories($filtre){
+    return $this->unModele->searchAllCategories($filtre);
+}
+
+public function insertCategorie($tab){
+    $this->unModele->insertCategorie($tab);
+}
+
+public function deleteCategorie ($numClient){
+    $this->unModele->deleteCategorie($numClient);
+}
+
+public function selectWhereCategorie($numClient){
+    return $this->unModele->selectWhereCategorie($numClient);
+}
+
+public function updateCategorie ($tab){
+    return $this->unModele->updateCategorie($tab);
+}
 }
 ?>

@@ -43,12 +43,10 @@ use sog;
         foreign key (numClient) references Client (numClient)
     );
 
-    create table Contrat (
+    create table contrat (
         numContrat int(5) not null auto_increment,
         dateFin datetime,
-        /* dateV = date limite ou de validitÃ© */
         dateV datetime,
-        /* montantMHt = montant mensuel ht */
         montantMHt decimal (10,3),
         numClient int(3) not null,
         primary key(numContrat),
@@ -132,6 +130,13 @@ insert into intervention values
 insert into intervention values
 (null," 2023-07-10 18:50:00", "2023-07-10 18:15:00", "2023-06-10 19:30:00", "Accepter", "imprimante", 1, 1);
 
+insert into intervention values
+(null," 2023-06-10 17:15:00", "2023-06-10 17:15:00", "2023-06-10 17:15:00", "terminer", "souris", 1, 1);
+
+
+insert into intervention values
+(null," 2023-06-10 17:15:00", "2023-06-10 17:15:00", "2023-06-10 17:15:00", "terminer", "ecran", 1, 1);
+
 
 
 insert into intervention values
@@ -146,6 +151,14 @@ insert into intervention values
 insert into intervention values
 (null," 2023-06-10 17:15:00", "2023-06-10 17:15:00", "2023-06-10 17:15:00", "terminer", "Ipad", 1, 2);
 
+
+insert into intervention values
+(null," 2023-06-10 17:15:00", "2023-06-10 17:15:00", "2023-06-10 17:15:00", "terminer", "souris", 1, 2);
+
+
+insert into intervention values
+(null," 2023-06-10 17:15:00", "2023-06-10 17:15:00", "2023-06-10 17:15:00", "terminer", "ecran", 1, 2);
+
 update intervention
 set etat ="terminer"
 where numI = 3;
@@ -158,3 +171,13 @@ where numI = 5;
 
 insert into contrat values 
 (null,  "2023-07-10 18:50:00", "2023-07-10 18:50:00", "60.000", 2);
+
+CREATE TABLE categorie (
+    numClient INT(3) NOT NULL,
+    libelleCategorie VARCHAR(25),
+    PRIMARY KEY (numClient),
+    FOREIGN KEY (numClient) REFERENCES client(numClient)
+);
+
+insert into categorie values(1, "Très bon");
+

@@ -47,16 +47,18 @@
 
         foreach ($lesClients as $unClient) {
             echo "<tr>";
-            echo "<td>" . htmlspecialchars($unClient['numClient']) . "</td>";
-            echo "<td>" . htmlspecialchars($unClient['nomClient']) . "</td>";
-            echo "<td>" . htmlspecialchars($unClient['adresse']) . "</td>";
-            echo "<td>" . htmlspecialchars($unClient['ville']) . "</td>";
-            echo "<td>" . htmlspecialchars($unClient['codePostal']) . "</td>";
+            echo "<td>" . $unClient['numClient'] . "</td>";
+            echo "<td>" . $unClient['nomClient'] . "</td>";
+            echo "<td>" . $unClient['adresse'] . "</td>";
+            echo "<td>" . $unClient['ville'] . "</td>";
+            echo "<td>" . $unClient['numTel'] . "</td>";
+            echo "<td>" . $unClient['adressemail'] . "</td>";
+            echo "<td>" . $unClient['typeClient'] . "</td>";
             echo "<td>
-                    <a href='gestion_client.php?action=sup&numClient=" . htmlspecialchars($unClient['numClient']) . "'>
+                    <a href='gestion_client.php?action=sup&numClient=" .$unClient['numClient'] . "'>
                         <img src='img/suppr.jpeg' height='30' width='30' alt='Supprimer'>
                     </a>
-                    <a href='gestion_client.php?action=edit&numClient=" . htmlspecialchars($unClient['numClient']) . "'>
+                    <a href='gestion_client.php?action=edit&numClient=" .$unClient['numClient'] . "'>
                         <img src='img/edit.jpeg' height='30' width='30' alt='Éditer'>
                     </a>
                   </td>";

@@ -31,6 +31,7 @@ session_start();
      
   <li><a href="gestion_intervention.php">Tableau de bord</a></li>
   <li><a href="../site_PPE_SOG/logout.php" style="color: white;">Déconnexion</a></li>
+  <li><a href="gestion_categorie.php">categorie client</a></li>
   <!--<li><a href="liste_client.php" style="color: white;">liste client</a></li>-->
 
     </center>

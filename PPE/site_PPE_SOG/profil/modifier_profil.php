@@ -23,7 +23,7 @@ $ville = $_POST['ville'];
 $codePostal = $_POST['code_postal'];
 $numTel = $_POST['telephone'];
 $adressemail = $_POST['adressemail'];
-$passwordc =  $_POST['passwordc']; // hacher le mdp 
+$passwordc =  $_POST['passwordc']; //hacher le mdp 
 
 // Requête de mise à jour des informations dans la base de données
 $requete = "UPDATE client SET nomClient='".$nomClient."', adresse='".$adresse."', ville='".$ville."', 
